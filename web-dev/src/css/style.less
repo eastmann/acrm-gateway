@@ -1,0 +1,334 @@
+@import "colors";
+@import "animations";
+
+@font-face {
+    font-family: "Rostelecom basis";
+    src: url("../assets/fonts/RostelecomBasis-Light.otf") format("opentype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Rostelecom basis";
+    src: url("../assets/fonts/RostelecomBasis-Regular.otf") format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Rostelecom basis";
+    src: url("../assets/fonts/RostelecomBasis-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: "Rostelecom basis";
+    src: url("../assets/fonts/RostelecomBasis-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    font-family: 'Rostelecom Basis';
+}
+
+div {
+    font-family: 'Rostelecom Basis';
+}
+
+span {
+    font-family: 'Rostelecom Basis';
+}
+
+table {
+    font-family: 'Rostelecom Basis';
+}
+
+tr {
+    font-family: 'Rostelecom Basis';
+}
+
+td {
+    font-family: 'Rostelecom Basis';
+}
+
+th {
+    font-family: 'Rostelecom Basis';
+}
+
+.rt-font{
+    font-family: 'Rostelecom Basis' !important;
+}
+
+body {
+    font-family: "Rostelecom basis", "Tahoma", "sans-serif";
+    //background-color: rgba(123, 147, 155, .30);
+    //background-image: url("../assets/img/corner_top_left.png"), url("../assets/img/corner_bottom_right.png");
+    //background-position: top left, bottom right;
+    //background-size: 480px, 258px;
+    //background-repeat: no-repeat no-repeat;
+
+
+    //background-image:  url("../assets/img/main_slider/conteiner.png");
+    background-position: top ;
+    background-repeat: no-repeat;
+    //background-size:100%;
+
+    background-position-x: 100%;
+    background-position-y: 46%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+
+}
+
+hr {
+    border-top: 1px solid @comGray_1;
+    border-bottom: none;
+    background: none;
+}
+
+h1 {
+    font-family: 'Rostelecom Basis';
+    color: @comGray_1;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: 'Rostelecom Basis';
+    font-style: normal;
+    font-weight: 100;
+
+    color: @comGray_1;
+    font-size: 20px;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+h3 {
+    color: @darkGrey;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+
+.page {
+    //margin: auto;
+    //width: 1174px;
+    ////max-height: calc(100% - 35px);
+    //min-height: calc(100% - 5px);
+    ////padding-bottom: 30px;
+
+    padding: 0 20px;
+}
+
+.main-logo {
+    display: inline-block;
+    width: 250px;
+    height: 94px;
+    padding-left: 3px;
+    vertical-align: top;
+}
+
+
+.clearfix {
+    clear:both;
+}
+
+.menu-icon {
+    display: inline-block;
+    width: 35px;
+    height: 25px;
+    background: url("/img/menu.png") no-repeat;
+    background-size: 35px 25px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+a {
+    color: @baseViolet;
+    font-weight: 700;
+}
+
+.rtk-button-port {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 8px 20px 8px;
+    border-radius: 5px;
+    border: 2px solid @baseViolet;
+    background-color: #fefefe;
+    color: @baseViolet;
+    cursor: pointer;
+}
+
+.com-link-extended-search {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    color: @comPurple;
+    padding-top: 16px;
+    cursor: pointer;
+}
+
+.com-link-extended-list {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    color: @comOrange;
+    padding-top: 16px;
+    cursor: pointer;
+}
+
+.rtk-button {
+    display: inline-block;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    padding: 23px 83px 20px;
+    border-radius: 5px;
+    //border: 2px solid @baseViolet;
+    background-color:@comOrange;
+    color: @comWhite;
+    cursor: pointer;
+}
+
+.slide2 {
+    height: 100%;
+    text-align: center;
+    display: table !important;
+}
+.slide2 div {
+
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.site-section {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.base-info-block {
+    margin: 0px 0;
+    padding: 10px;
+    //border: 1px solid @baseViolet;
+    transition: height 0.3s ease;
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+.no-top-margin {
+    margin-top: 0;
+}
+
+.header-icon {
+    margin-right: 10px;
+}
+
+.grey {
+    color: @lightGrey;
+}
+
+.float-right {
+    float: right;
+}
+
+.header-png-icon {
+    height: 20px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.save-excel-icon {
+    color: @baseViolet;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1.0 !important;
+    }
+}
+
+.com-caption{
+    font-family: 'Rostelecom Basis';
+    font-style: normal;
+    font-weight: 100;
+}
+
+.com-back-gray {
+    background-color: #F3F3F4;
+    height: calc(100% - 65px);
+    border-radius: 5px;
+    padding: 32px;
+    margin-top: 26px;
+}
+
+.com-window-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.com-container-center {
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-weight: 100;
+}
+
+h1{
+    font-weight: normal;
+}
+
+.acrm__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acrm__container-right {
+    display: flex;
+    justify-content: right;
+}
+
+.acrm__container-left {
+    display: flex;
+    justify-content: left;
+}
+
+.margin-top-10{
+    margin-top: 10px;
+}
+
+.rt-col-center {
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: #101828 !important;
+    text-align: center;
+}
+
+.rt-col-center-latter-spacing {
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+

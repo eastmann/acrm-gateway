@@ -1,0 +1,165 @@
+@import "../../../../css/colors";
+
+.search-box {
+  position: relative;
+}
+
+.search-input-text {
+  background: @comWhite;
+
+  font-family: 'Rostelecom Basis';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 11px 16px;
+
+  color: #757575;
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: #cdcccc;
+  font-weight: normal;
+}
+.search-input-text2 {
+  background: @comSearchBackground;
+
+  font-family: 'Rostelecom Basis';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 1px 1px;
+
+  color: #757575;
+  border-radius: 5px;
+}
+
+.search-box-input-line {
+  display: grid;
+  grid-template-columns: calc(100% - 200px) 200px;
+  box-sizing: border-box;
+
+  input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-right: 24px;
+  }
+}
+
+.search-box-input-line2 {
+  display: grid;
+  //grid-template-columns: calc(100% - 100px) 100px;
+  box-sizing: border-box;
+
+  input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-left: 15px;
+    font-weight: 100;
+  }
+}
+
+.search-box-button {
+  font-family: 'Rostelecom Basis';
+  font-weight: 100;
+  //line-height: 48px;
+
+  //text-align: center;
+  cursor: pointer;
+  //display: flex;
+  //flex-direction: row;
+  //align-items: flex-start;
+  text-align: center;
+  padding: 14px;
+  background: #FD4D21;
+  color: @comWhite;
+  size: 20px;
+  border-radius: 5px;
+}
+
+.suggestions {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-family: 'Rostelecom Basis';
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+
+  position: absolute;
+  border-radius: 8px;
+  top: 52px;
+  z-index: 100;
+  width: 100%;
+  border: 1px solid @lightGrey;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  font-weight: 100;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.suggestion {
+  padding: 5px 0 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 100;
+  &.selected {
+    //background: @lightGrey;
+    //font-weight: normal;
+  }
+}
+
+.company-suggestion-status {
+  color: @errorRed;
+  margin-right: 24px;
+}
+
+.hr {
+  border: none;
+  background-color: @lightGrey;
+  color: @lightGrey;
+  margin-left: 10px;
+  margin-right: 24px;
+  height: 1px;
+}
+
+//.company-suggestion-name {
+//  font-weight: 100;
+//  font-size: 14px;
+//  color: black ;
+//  padding-top: 4px;
+// // background: @lightGrey;
+//  .selected {
+//    background: red;
+//    font-weight: normal;
+//  }
+//}
+.company-suggestion-name{
+  font-family: 'Rostelecom Basis';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  color: grey;
+  line-height: 20px;
+}
+.company-suggestion-address{
+  //font-family: 'Rostelecom Basis';
+  //text-decoration: none;
+  //font-style: normal;
+  //font-weight: 500;
+  //
+  //color: @acrmViolet;
+  //font-size: 18px;
+
+  font-family: 'Rostelecom Basis';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+}
+
+.company-suggestion {
+
+}

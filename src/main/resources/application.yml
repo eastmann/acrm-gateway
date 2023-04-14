@@ -1,0 +1,76 @@
+read-time-out: 120000
+connection-time-out: 120000
+
+spring:
+    application:
+        name: acrm-gateway
+    mvc:
+        throw-exception-if-no-handler-found: true
+
+zuul:
+    host:
+        socket-timeout-millis: 120000
+        connect-timeout-millis: 120000
+    routes:
+        auth:
+            path: /auth/**
+            url: ${AUTH_URL:http://localhost:38151}
+
+        backend:
+            path: /backend/**
+            url: ${BACKEND_URL:http://localhost:38152}
+
+        service-search:
+            path: /service-search/**
+            url: ${SERVICE_SEARCH_URL:http://localhost:38153}
+
+    sensitiveHeaders: Cookie,Set-Cookie
+
+server:
+
+    port: 38150
+#    session:
+#        timeout: 86400
+    servlet:
+        session:
+            timeout: 86400
+            cookie:
+                secure: false
+                http-only: false
+
+    tomcat:
+        relaxed-query-chars: ['{','}','|']
+#        relaxed-query-chars: ['{','}','[',']','^','<','>','|']
+
+logging:
+    file:
+        name: logs/gateway.log
+        max-history: 7
+
+backend:
+    read-time-out: 120000
+    connection-time-out: 120000
+    get-authorities: authority/get-authorities?login={login}
+    holdings: holding-api/holdings?login={login}
+    holding-detail: holding-api/detail-info/by-hid-and-id?hid={hid}&id={id}&dzo-id={dzo-id}&login={login}
+
+service-search:
+    read-time-out: 120000
+    connection-time-out: 120000
+    get-authorities: authority/get-authorities?login={login}
+    find-by-all: /company/suggestions/by-all?value={value}
+
+auth-server:
+    read-time-out: 60000
+    connection-time-out: 60000
+    login: mdm-2-0
+    password: mdm-2-0-pass
+    host: ${AUTH_URL:http://localhost:38151}
+    token-path: /oauth/token
+    check-token-path: /oauth/check_token
+    log-requests: true
+    #AuthUserHistoryController
+    history-put-record: auth-api/put-record?login={login}&url={url}&info={info}
+    #AuthorityController
+    get-roles: get-roles?login={login}
+    get-user: get-user?login={login}
